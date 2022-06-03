@@ -10,5 +10,8 @@ const appPort = getAppPort();
 app.get("/", helloWorldRouter);
 
 app.listen(appPort, () => {
-    console.log("Listening for requests on port: ", appPort);
+  console.log("Listening for requests on port: ", appPort);
 });
+
+process.on("SIGTERM", () => process.exit(0));
+process.on("SIGINT", () => process.exit(0));
