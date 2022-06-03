@@ -6,6 +6,5 @@ Dedicated repository for teaching others about OpenTelemetry!
 
 ### Running tracing service:
 
-** Using Zipkin to collect the traces:
-
-*** Start Docker and run: `docker run --rm -d -p 9411:9411 --name zipkin openzipkin/zipkin`
+* Using Zipkin to collect the traces:
+  * Start Docker and run: `docker run --rm -d -p 9411:9411 --name zipkin openzipkin/zipkin`
