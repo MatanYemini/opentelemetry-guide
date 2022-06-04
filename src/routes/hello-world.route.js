@@ -1,7 +1,11 @@
 const express = require("express");
+const { requestCounterMetric } = require("../opentelemetry/monitoring");
 
-module.exports.helloWorldRouter = express.Router();
+const helloWorldRouter = express.Router();
 
-this.helloWorldRouter.get("/", (_req, res) => {
+helloWorldRouter.get("/", (_req, res) => {
+  requestCounterMetric.inc(1);
   res.status(200).json("Hello World!");
 });
+
+module.exports = helloWorldRouter;
